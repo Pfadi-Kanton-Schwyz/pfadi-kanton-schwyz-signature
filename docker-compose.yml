@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    image: php:7.3-apache
+    container_name: signature
+    restart: always
+    environment:
+      - "VIRTUAL_HOST=signature.bula21.ch"
+      - "LETSENCRYPT_HOST=signature.bula21.ch"
+      - "LETSENCRYPT_EMAIL=it-support@bula21.ch"
+    volumes:
+      - ./files:/var/www/html/
+    networks:
+      - proxy_net
+    stdin_open: true
+    tty: true
+
+networks:
+  proxy_net:
+    external:
+      name: proxy_net
+
