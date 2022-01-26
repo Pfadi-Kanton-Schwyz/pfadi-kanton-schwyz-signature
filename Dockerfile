@@ -28,4 +28,4 @@ RUN \
 
 FROM dev
 
-COPY ./files/* /var/www/html/
+COPY ./files /var/www/html
