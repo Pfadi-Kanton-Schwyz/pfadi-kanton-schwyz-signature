@@ -1,5 +1,5 @@
 
-FROM php:7.3-apache
+FROM php:7.3-apache as dev
 
 RUN a2enmod rewrite
 
@@ -26,3 +26,6 @@ RUN \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
     docker-php-ext-install ldap
 
+FROM dev
+
+COPY ./files/* /var/www/html/
