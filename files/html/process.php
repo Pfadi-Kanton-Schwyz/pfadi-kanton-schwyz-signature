@@ -28,136 +28,66 @@
         $gender = $_POST["gender"];
         $name = $_POST["firstname"];
         $surname = $_POST["pfadiName"];
-        $sector = $_POST["Comission"];
-        $title = $_POST["role"];
-        $subSector = $_POST["subSector"];
         $phone = $_POST["phone"];
         $mail = $_POST["mail"];
-        $test = false;
+        $street = $_POST["street"];
+        $plz = $_POST["plz"];
+        $city = $_POST["city"];
+        $role = $_POST["role"];
         $space = ", ";
         
-        if($gender == "male"){
-            if($title == "Responsable de commission"){
-                $titleFR = "Responsable de ressort";
-                $titleDE = "Ressortleiter";
-                $titleIT = "Responsabile del ressort";
-                $space ="";
-                $subSector="";
-            } elseif($title == "Responsable de sous commission"){
-                $titleFR = "Responsable de secteur";
-                $titleDE = "Bereichsleiter";
-                $titleIT = "Responsabile del settore";
-            } elseif($title == "Responsable de sous sous commission"){
-                $titleFR = "Responsable de sous-secteur";
-                $titleDE = "Teilbereichsleiter";
-                $titleIT = "Responsabile del sottosettore";
-            } elseif($title == "Colaborateur"){
-                $titleFR = "Collaborateur";
-                $titleDE = "Mitarbeiter";
-                $titleIT = "Collaboratore";
-            } elseif($title == "Responsable de camp"){
-                $titleFR = "Co-responsable de camp";
-                $titleDE = "Co-Lagerleiter";
-                $titleIT = "Co-capicampo";
-            } elseif($title == "none"){
-                $titleFR = "";
-                $titleDE = "";
-                $titleIT = "";
-                $space ="";
+        if($role == "Ausbildung"){
+            $roleDE = "Ausbildung";
+            $space ="";
+        } elseif($role == "Betreuung"){
+            $roleDE = "Betreuung";
+        } elseif($role == "Finanzen"){
+            $roleDE = "Finanzen";
+        } elseif($role == "Kantonsleiter"){
+            if($gender == "male"){
+                $roleDE = "Kantonsleiter"
+            } else{
+                $roleDE = "Kantonsleiterin"
             }
-        
-        } 
-        
-        if($gender == "female"){
-            if($title == "Responsable de commission"){
-                $titleFR = "Responsable de ressort";
-                $titleDE = "Ressortleiterin";
-                $titleIT = "Responsabile del ressort";
-                $space ="";
-                $subSector="";
-            } elseif($title == "Responsable de sous commission"){
-                $titleFR = "Resposable de secteur";
-                $titleDE = "Bereichsleiterin";
-                $titleIT = "Responsabile del settore";
-            } elseif($title == "Responsable de sous sous commission"){
-                $titleFR = "Responsable de sous-secteur";
-                $titleDE = "Teilbereichsleiterin";
-                $titleIT = "Responsabile del sottosettore";
-            } elseif($title == "Colaborateur"){
-                $titleFR = "Collaboratrice";
-                $titleDE = "Mitarbeiterin";
-                $titleIT = "Collaboratrice";
-            } elseif($title == "Responsable de camp"){
-                $titleFR = "Co-responsable de camp";
-                $titleDE = "Co-Lagerleiterin";
-                $titleIT = "Co-capicampo";
-            } elseif($title == "none"){
-                $titleFR = "";
-                $titleDE = "";
-                $titleIT = "";
-                $space ="";
+        } elseif($role == "Medien"){            
+            if($gender == "male"){
+                $roleDE = "Medien Verantwortlicher"
+            } else{
+                $roleDE = "Medien Verantwortliche"
             }
-        } 
-        
-        if($sector== "Communikation"){
-            $sectorFR = "Communication";
-            $sectorDE = "Kommunikation";
-            $sectorIT = "Comunicazione";
-        } elseif($sector== "Finance"){
-            $sectorFR = "Finance";
-            $sectorDE = "Finanzen";
-            $sectorIT = "Finanze";
-        } elseif($sector== "Logistic"){
-            $sectorFR = "Logistique";
-            $sectorDE = "Logistik";
-            $sectorIT = "Logistica";
-        } elseif($sector== "Staff"){
-            $sectorFR = "Staff";
-            $sectorDE = "Staff";
-            $sectorIT = "Staff";
-        } elseif($sector== "SanSi"){
-            $sectorFR = "Santé et sécurité";
-            $sectorDE = "Sanität und Sicherheit";
-            $sectorIT = "Sanità e sicurezza";
-        } elseif($sector== "Support"){
-            $sectorFR = "Support";
-            $sectorDE = "Support";
-            $sectorIT = "Supporto";
-        } elseif($sector== "Programme"){
-            $sectorFR = "Programme";
-            $sectorDE = "Programm";
-            $sectorIT = "Programma";
-        }
-        elseif($sector== "Comite"){
-            $sectorFR = "Comité";
-            $sectorDE = "Vorstand";
-            $sectorIT = "Comitato";
-        }
-        elseif($sector== "Secretariat"){
-            $sectorFR = "Sécrétariat général";
-            $sectorDE = "Geschäftsstelle";
-            $sectorIT = "Segretariato generale";
-        }
-        
-        
+        } elseif($role == "Piostufe"){
+            $roleDE = "Piostufe";
+        } elseif($role == "Roverstufe"){
+            $roleDE = "Roverstufe";
+        } elseif($role == "Sekretariat"){
+            $roleDE = "Sekretariat";
+        } elseif($role == "Wölfli & Biberstufe"){
+            $roleDE = "Wölfli & Biberstufe";
+        } elseif($role == "none"){
+            $roleDE = "";
+            $space ="";
+        }       
     ?>
         <table id="t01">
             <tr>
-                <th>
-                    <img src="../img/Mova_Logo_black_rgb_Mailsignatur_marginright_big.png" alt="Mova logo" height="150px">
-
-                </th>
                 <th style="margin: 0; padding: 0; line-height: 15px">
-                    <p style="font-weight: 700; margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px"><?php echo $name . " / "  . $surname ?></p>
+                    <p style="font-weight: 700; margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 11px"><?php echo $name . " / "  . $surname ?></p>
                     <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px; font-weight: 300"><?php echo $titleFR . " " . $subSector . $space . $sectorFR ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px; font-weight: 300"><?php echo $titleDE . " " . $subSector. $space . $sectorDE ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px; font-weight: 300"><?php echo $titleIT . " " . $subSector . $space . $sectorIT ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $roleDE . " Pfadi Kt. Schwyz" ?></p>
                     <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px; font-weight: 300"><?php echo $phone ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px; font-weight: 300"><?php echo $mail ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 12.5px; font-weight: 300">www.mova.ch</p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $street ?></p>
+                    <br>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $city . " " . $plz ?></p>
+                    <br>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $phone ?></p>
+                    <br>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $mail ?></p>
+                    <br>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300">www.pfadischwyz.ch</p>
                 </th>
+            </tr>
+            <tr>
+                <img src="../img/PfadiSZ_Logo.png" alt="Pfadi SZ logo" height="150px">
             </tr>
         </table>
     </div>

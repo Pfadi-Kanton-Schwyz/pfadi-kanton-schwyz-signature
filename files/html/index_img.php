@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <img src="../img/Mova_Logo_black_rgb_Mailsignatur_marginright_big.png">
+    <img src="../img/PfadiSZ_Logo.png">
 </body>
 
 </html>
