@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #ffeb00;
+    background: #000000;
 }
 
 header {
@@ -10,7 +10,7 @@ header {
 }
 
 header svg{
-    fill: #55c0ff;
+    fill: #E30613;
 }
 
 .container {

@@ -45,15 +45,15 @@
             $roleDE = "Finanzen";
         } elseif($role == "Kantonsleiter"){
             if($gender == "male"){
-                $roleDE = "Kantonsleiter"
-            } else{
-                $roleDE = "Kantonsleiterin"
+                $roleDE = "Kantonsleiter";
+            } else {
+                $roleDE = "Kantonsleiterin";
             }
         } elseif($role == "Medien"){            
             if($gender == "male"){
-                $roleDE = "Medien Verantwortlicher"
-            } else{
-                $roleDE = "Medien Verantwortliche"
+                $roleDE = "Medien Verantwortlicher";
+            } else {
+                $roleDE = "Medien Verantwortliche";
             }
         } elseif($role == "Piostufe"){
             $roleDE = "Piostufe";
@@ -70,24 +70,19 @@
     ?>
         <table id="t01">
             <tr>
-                <th style="margin: 0; padding: 0; line-height: 15px">
-                    <p style="font-weight: 700; margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 11px"><?php echo $name . " / "  . $surname ?></p>
-                    <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $roleDE . " Pfadi Kt. Schwyz" ?></p>
-                    <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $street ?></p>
-                    <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $city . " " . $plz ?></p>
-                    <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $phone ?></p>
-                    <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300"><?php echo $mail ?></p>
-                    <br>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8px; font-weight: 300">www.pfadischwyz.ch</p>
+                <th style="margin: 0; padding: 0; line-height: 11pt">
+                    <p style="font-weight: 700; margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 11pt"><?php echo $name . " / "  . $surname ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $roleDE . " Pfadi Kt. Schwyz" ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $street ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $city . " " . $plz ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a></p>
+                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a></p>
                 </th>
             </tr>
             <tr>
-                <img src="../img/PfadiSZ_Logo.png" alt="Pfadi SZ logo" height="150px">
+                <th>
+                    <a href="https://www.pfadischwyz.ch"><img src="../img/PfadiSZ_Logo.png" alt="Pfadi SZ logo" height="30px"></a>
+                </th>
             </tr>
         </table>
     </div>

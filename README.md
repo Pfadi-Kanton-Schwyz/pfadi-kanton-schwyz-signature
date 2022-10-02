@@ -1,8 +1,8 @@
 # Signature
 
-[signature.bula21.ch](https://signature.bula21.ch/)
+[signature.pfadischwyz.ch](https://signature.pfadischwyz.ch/)
 
-_Small php tool to generate an email signature by KOMM._
+_Small php tool to generate an email signature. Original source taken from https://github.com/bula21/mova21-signature (private repo)._
 
 ## Development
 
@@ -10,4 +10,4 @@ Use the supplied `docker-compose.yml`. If you don't know how to use it, check [t
 
 ## Deployment
 
-We have an Azure subscription and use an App Service to build and deploy.
+Deployed on Wiwos Server in a Pfadihus.
