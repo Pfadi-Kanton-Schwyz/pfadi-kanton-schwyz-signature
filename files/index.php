@@ -34,10 +34,10 @@
                         <label for="female">Weiblich</label><br>
                     </div>
                 </div>
-                <input type="text" name="firstname" placeholder="Name und Vorname">
+                <input type="text" name="firstname" required placeholder="Name und Vorname">
                 <input type="text" name="pfadiName" placeholder="Pfadiname">
-                <input type="tel" name="phone" placeholder="Telefonnummer">
-                <input type="email" name="mail" placeholder="E-Mail-Adresse">
+                <input type="tel" name="phone" placeholder="Telefonnummer (+41 79 000 00 00)">
+                <input type="email" name="mail" placeholder="E-Mail-Adresse (test@example.org)">
                 <input type="text" name="street" placeholder="Strasse">
                 <input type="text" name="plz" placeholder="PLZ">
                 <input type="text" name="city" placeholder="Ort">

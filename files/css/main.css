@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: #55c0ff;
+    background: #000000;
 }
 
 header {
@@ -10,9 +10,8 @@ header {
 }
 
 header svg{
-   fill: #ffeb00;
+   fill: #E30613;
 }
-
 
 .container {
     position: absolute;
@@ -42,7 +41,7 @@ form {
 
 .info {
     color: #e6500f;
-    font-size 14px;
+    font-size: 14px;
     font-weight: 600;
     margin: 16px 0;
 }

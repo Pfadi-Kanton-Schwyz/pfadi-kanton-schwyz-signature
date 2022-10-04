@@ -71,12 +71,12 @@
         <table id="t01">
             <tr>
                 <th style="margin: 0; padding: 0; line-height: 11pt">
-                    <p style="font-weight: 700; margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 11pt"><?php echo $name . " / "  . $surname ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $roleDE . " Pfadi Kt. Schwyz" ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $street ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $city . " " . $plz ?></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a></p>
-                    <p style="margin: 0; text-align: left; font-family: 'arial', sans-serif; font-size: 8pt; font-weight: 300"><a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a></p>
+                    <p style="font-weight: 700; margin: 0; text-align: left; font-family: 'Trebuchet MS', sans-serif; font-size: 11pt"><?php echo $name . " / "  . $surname ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'Trebuchet MS', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $roleDE . " Pfadi Kt. Schwyz" ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'Trebuchet MS', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $street ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'Trebuchet MS', sans-serif; font-size: 8pt; font-weight: 300"><?php echo $city . " " . $plz ?></p>
+                    <p style="margin: 0; text-align: left; font-family: 'Trebuchet MS', sans-serif; font-size: 8pt; font-weight: 300"><a href="tel:<?php echo $phone ?>"><?php echo $phone ?></a></p>
+                    <p style="margin: 0; text-align: left; font-family: 'Trebuchet MS', sans-serif; font-size: 8pt; font-weight: 300"><a href="mailto:<?php echo $mail ?>"><?php echo $mail ?></a></p>
                 </th>
             </tr>
             <tr>
